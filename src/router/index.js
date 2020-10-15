@@ -371,7 +371,18 @@ export const asyncRoutes = [
       }
     ]
   },
-
+  {
+    path: '/city',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/city/index'),
+        name: 'CITY',
+        meta: { title: 'City', icon: 'link' }
+      }
+    ]
+  },
   {
     path: 'external-link',
     component: Layout,
